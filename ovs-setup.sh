@@ -9,6 +9,8 @@ sudo pip install six
 modprobe tun
 modprobe vxlan
 
-git clone https://github.com/openvswitch/ovs.git
-cd ovs
-git checkout v${OVS_VER}
+wget http://openvswitch.org/releases/openvswitch-2.9.0.tar.gz
+tar xvfz openvswitch-2.9.0.tar.gz
+cd openvswitch-2.9.0
+./configure
+./make
