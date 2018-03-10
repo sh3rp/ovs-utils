@@ -1,6 +1,6 @@
 #!/bin/sh
 
-OVS_VER=2.7.0
+VSWITCH_ID="$(hostname)-vs-01"
 
 sudo apt -y update && sudo apt -y upgrade
 sudo apt -y install automake autoconf gcc libssl-dev python-pip
@@ -17,4 +17,4 @@ make
 sudo make install
 sudo /sbin/modprobe openvswitch
 
-sudo /usr/local/share/openvswitch/scripts/ovs-ctl start
+sudo /usr/local/share/openvswitch/scripts/ovs-ctl --system-id="${VSWITCH_ID}" start
