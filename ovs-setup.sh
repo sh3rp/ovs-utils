@@ -12,7 +12,7 @@ modprobe vxlan
 wget http://openvswitch.org/releases/openvswitch-2.9.0.tar.gz
 tar xvfz openvswitch-2.9.0.tar.gz
 cd openvswitch-2.9.0
-configure
+./configure
 make
 sudo make install
 sudo /sbin/modprobe openvswitch
